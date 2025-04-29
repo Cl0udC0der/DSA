@@ -25,26 +25,26 @@ class Solution:
 
 
 # Index out of bounds but passes a few tests
-# class Solution:
-#     def countLargestGroup(self, n: int) -> int:
-#         numbers = []
-#         counter = []
+class Solution:
+    def countLargestGroup(self, n: int) -> int:
+        numbers = []
+        counter = []
 
-#         for i in range(1, n+1):
-#             if i < 10: 
-#                 numbers.append([i])
-#                 counter.append(1)
-#             elif i>= 10:
-#                 k = i
-#                 sum = 0
-#                 for j in range(len(str(i))-1):
-#                     # Sum did not reiterate to be < 10
-#                     sum += k%10
-#                     k //= 10
-#                     if sum >= 10:
-#                         sum = sum%10 + sum//10
-#                     if k < 10: break
-#                 numbers[sum].append(i)
-#                 counter[sum] += 1
+        for i in range(1, n+1):
+            if i < 10: 
+                numbers.append([i])
+                counter.append(1)
+            elif i>= 10:
+                k = i
+                sum = 0
+                for j in range(len(str(i))-1):
+                    # Sum did not reiterate to be < 10
+                    sum += k%10
+                    k //= 10
+                    if sum >= 10:
+                        sum = sum%10 + sum//10
+                    if k < 10: break
+                numbers[sum].append(i)
+                counter[sum] += 1
 
-#         return counter.count(len(max(numbers, key=len)))
+        return counter.count(len(max(numbers, key=len)))

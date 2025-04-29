@@ -13,11 +13,11 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 print(twoSum([2,4,5,6,7,2], 12))
 
 # I have no memory of this
-# from typing import List
-# def twoSum(nums: List[int], target: int) -> List[int]:
-#     num_map = {}  # Hash table to store number and its index
-#     for i, num in enumerate(nums):
-#         complement = target - num  # Find the complement
-#         if complement in num_map:
-#             return [num_map[complement], i]  # Return indices of complement and current number
-#         num_map[num] = i  # Store the number with its index
+from typing import List
+def twoSum(nums: List[int], target: int) -> List[int]:
+    num_map = {}  # Hash table to store number and its index
+    for i, num in enumerate(nums):
+        complement = target - num  # Find the complement
+        if complement in num_map:
+            return [num_map[complement], i]  # Return indices of complement and current number
+        num_map[num] = i  # Store the number with its index
