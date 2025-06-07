@@ -1,4 +1,4 @@
-# 2 part approach. 1 pass to go up to the array and create the prefix which is stored in the output to save memory
+# 2 part approach. 1 pass to go up to the array and create the prefix values which are stored in the output to save memory
 # Next pass is in reverse and uses the output and logic of prefix in conjunction with postfix to get the resulting 
 # products to arrive at the proper solution
 
