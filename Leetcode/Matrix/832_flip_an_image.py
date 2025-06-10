@@ -8,3 +8,5 @@ class Solution:
             for k, j  in enumerate(i):
                 i[k] ^= 1
         return image
+    
+    
